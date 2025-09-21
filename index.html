@@ -1,131 +1,72 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>胡又仁的个人主页</title>
-  <style>
-    body {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #eee;
-    }
-    h1 {
-      color: #2563eb;
-      margin: 0 0 10px 0;
-    }
-    h2 {
-      margin: 0 0 20px 0;
-      color: #666;
-      font-weight: normal;
-    }
-    section {
-      margin-bottom: 25px;
-    }
-    h3 {
-      margin: 0 0 10px 0;
-      color: #444;
-    }
-    ul, ol {
-      margin: 0;
-      padding-left: 20px;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .hobbies {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 5px;
-    }
-    .hobby-tag {
-      background: #f0f5ff;
-      padding: 3px 10px;
-      border-radius: 12px;
-      font-size: 0.9em;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding-top: 15px;
-      border-top: 1px solid #eee;
-      color: #888;
-      font-size: 0.9em;
-    }
-    img {
-      max-width: 300px;
-      border: 1px solid #eee;
-      border-radius: 4px;
-    }
-  </style>
+    <meta charset="UTF-8">
+
+    <title>我的主页</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>胡又仁</h1>
-    <h2>信息管理与信息系统专业 大二学生</h2>
-  </header>
 
-  <main>
-    <section>
-      <h3>个人简介</h3>
-      <p>热爱编程算法，积极学习新技术，性格开朗热情。工作学习之外喜爱足球，能从中领悟协作的重要性，增添面对挑战的韧性。以进取的态度探索编程算法，主动学习新技术。</p>
-    </section>
-
-    <section>
-      <h3>兴趣爱好</h3>
-      <div class="hobbies">
-        <span class="hobby-tag">编程</span>
-        <span class="hobby-tag">阅读技术文章</span>
-        <span class="hobby-tag">学习新技术</span>
-        <span class="hobby-tag">踢足球</span>
-      </div>
-    </section>
-
-    <section>
-      <h3>项目经历</h3>
-      <ul>
-        <li>蓝桥杯Python算法竞赛</li>
-        <li>刘长春杯足球竞赛</li>
-        <li>云泽杯营销模拟比赛</li>
-        <li>C语言程序设计课程</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>技能清单</h3>
-      <ol>
-        <li>编程语言：Python, C++</li>
-        <li>体育技能：足球</li>
-      </ol>
-    </section>
-
-    <section>
-      <h3>联系方式</h3>
-      <p>QQ邮箱：<a href="mailto:Hu_youren@qq.com">Hu_youren@qq.com</a></p>
-      <p>电话：<a href="tel:17765463258">17765463258</a></p>
-    </section>
-
-    <section>
-      <h3>个人照片</h3>
-      <img src="D:\git__仓库\personal-homepage\p.jpg" alt="胡又仁个人照片">
-    </section>
-  </main>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">我的主页</a>
+        </div>
+    </nav>
 
 
+    <div class="container mt-4">
+        <div class="row">
+<!--    <div id="wrapper">-->
+<!--       -->
+<!--        <div id="main-content">-->
 
+            <div class="col-md-8" >
+
+                <h1 id="main-title">胡又仁</h1>
+                <p>信息管理与信息系统专业 大二学生</p>
+
+
+                <h2 class="section-title">个人简介</h2>
+                <p>热爱编程算法，积极学习新技术，性格开朗热情。工作学习之外喜爱足球，能从中领悟协作的重要性，增添面对挑战的韧性。</p>
+
+                <h2 class="section-title">项目经历</h2>
+                <ul>
+                    <li>蓝桥杯Python算法竞赛</li>
+                    <li>刘长春杯足球竞赛</li>
+                    <li>云泽杯营销模拟比赛</li>
+                    <li>C语言程序设计课程项目</li>
+                </ul>
+
+
+            </div>
+
+<!--            <div id="sidebar">-->
+            <div class="col-md-4" >
+                <h2 class="section-title">技能清单</h2>
+
+                <ul class="list-group">
+                    <li class="list-group-item">编程语言：Python, C++</li>
+                    <li class="list-group-item">体育技能：足球</li>
+                </ul>
+
+                <h2 class="section-title">联系方式</h2>
+
+                <p>QQ邮箱：<a href="mailto:2531396193@qq.com" class="btn btn-primary">邮件联系我</a></p>
+                <p>电话：<a href="tel:17765463258">17765463258</a></p>
+
+                <h2 class="section-title">个人照片</h2>
+                <img src="p.jpg" alt="个人照片" class="img-fluid" width="300">
+            </div>
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
