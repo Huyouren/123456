@@ -1,0 +1,10 @@
+{%extends "bootstrap/base.html"%}
+{%import "bootstrap/wtf.html" as wtf%}
+
+{%block title%}添加新的学生{%endblock%}
+{%block content%}
+    <div class="page-header">
+        <h2>添加新的学生</h2>
+        {{wtf.quick_form(form)}}
+    </div>
+{%endblock%}

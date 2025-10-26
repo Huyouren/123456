@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{%import 'bootstrap/wtf.html' as wtf%}
+{%block page_content%}
+{%for message in get_flashed_messages()%}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+{%endfor %}
+    <div class = "page-header">
+        {%if name%}
+            <h1>当前登录用户：{{name}}</h1>
+        {%else%}
+            <h1>当前未登录用户</h1>
+        {%endif%}
+    </div>
+    {{wtf.quick_form(form)}}
+{%endblock%}
