@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+{%import "bootstrap/wtf.html" as wtf%}
+
+{%block title%}学生信息管理系统{%endblock%}
+
+{%block page_content%}
+<div class="page-header">
+    <h1>学生信息列表</h1>  
+    <div>
+        <a href="{{ url_for('index') }}" class="btn btn-primary btn-xs">所有学生</a>
+        {% for m in majors %}
+            <a href="{{ url_for('filter_by_major', major_id=m.id) }}" class="btn btn-default btn-xs">{{ m.major_name }}</a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container">
+    <h4>当前共有{{students|length}}个学生</h4> 
+    <!-- 仅admin显示“添加学生”按钮 -->
+    {% if current_user.is_authenticated and current_user.is_admin() %}
+        <a class="btn btn-primary" href="{{url_for('new_student')}}">添加学生</a>
+    {% endif %}
+    
+    <div style="margin-top: 20px;">
+        {%for student in students%}
+        <p>
+            {{student.student_id}} {{student.student_name}} 
+            {% if student.major %}
+                <span class="label label-info">{{ student.major.major_name }}</span>
+            {% else %}
+                <span class="label label-default">未分配专业</span>
+            {% endif %}
+            {{student.年龄}}
+            <!-- 仅admin显示“编辑/删除”按钮 -->
+            {% if current_user.is_authenticated and current_user.is_admin() %}
+                <a class="btn btn-default" href="{{url_for('edit', id=student.student_id)}}">编辑</a>
+                <a class="btn btn-danger" href="{{url_for('delete', id=student.student_id)}}">删除</a>
+            {% endif %}
+        </p>
+        {%else%}
+        <p>暂无学生信息</p>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}
